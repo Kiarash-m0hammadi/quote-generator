@@ -1,6 +1,9 @@
 "use client";
 export async function fetchQuotes(category) {
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  if (category === "random") {
+    category = "";
+  }
   const response = await fetch(
     `https://api.api-ninjas.com/v1/quotes?category=${category}`,
     {

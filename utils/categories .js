@@ -1,5 +1,6 @@
 "use client";
 export const categories = [
+  "random",
   "age",
   "alone",
   "amazing",

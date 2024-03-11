@@ -7,15 +7,15 @@ import { useQuotes } from "./useQuotes";
 
 export default function QuoteApp() {
   const { category, setCategory, quotes, isLoading, error, fetchNewQuotes } =
-    useQuotes("movies");
+    useQuotes("random");
 
-  const handleCategoryChange = (event) => {
-    setCategory(event.target.value);
+  const handleCategoryChange = (value) => {
+    setCategory(value);
   };
 
   return (
-    <div>
-      <h1>Quote App</h1>
+    <div className="container mx-auto my-auto justify-center text-left text-center">
+      <h1 className="text-left font-bold my-7 text-3xl">Quote App</h1>
       <CategorySelector
         category={category}
         onCategoryChange={handleCategoryChange}
