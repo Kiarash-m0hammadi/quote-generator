@@ -15,6 +15,11 @@ export default function Quote({ quotes }) {
     setCopiedQuote(quote.quote);
     navigator.clipboard.writeText(`"${quote.quote}" - ${quote.author}`);
   }
+  const handelClick = () => {
+    setTimeout(() => {
+      document.querySelector("ul").click();
+    }, 1000);
+  };
 
   function Typewriter({ text }) {
     const [currentText, setCurrentText] = useState("");
@@ -42,9 +47,11 @@ export default function Quote({ quotes }) {
           <ul>
             {quotes.map((quote, index) => (
               <motion.li
+                className="text-lg md:text-2xl font-serif my-4 text-slate-900 cursor-pointer transition-colors hover:text-slate-400"
                 key={quote.quote}
                 onClick={() => {
                   copyQuoteToClipboard(quote);
+                  handelClick();
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -60,7 +67,9 @@ export default function Quote({ quotes }) {
           </ul>
         </div>
       </PopoverTrigger>
-      <PopoverContent>Copied!</PopoverContent>
+      <PopoverContent className="bg-slate-800 text-white rounded-2xl text-center w-fit">
+        Copied!
+      </PopoverContent>
     </Popover>
   );
 }
