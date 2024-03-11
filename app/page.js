@@ -35,6 +35,13 @@ export default function QuoteApp() {
       <div className="svg-container">
         <BackgroundBeams className="BackgroundBeams bg-gray-300" />
       </div>
+
+      <a
+        href="https://github.com/Kiarash-m0hammadi"
+        className="fixed bottom-0 bg-slate-200 rounded-xl right-0 p-2 text-sm text-gray-500"
+      >
+        Creator&apos;s github
+      </a>
     </div>
   );
 }
