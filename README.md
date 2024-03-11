@@ -2,6 +2,11 @@
 
 This is a simple quote generator that utilizes the API services from api-ninjas.com, aceternity, and shadcn for UI.
 
+# Deployed at 
+
+```https://quote-generator-eight-delta.vercel.app/
+```
+
 ## Installation
 
 1. Clone the repository:
