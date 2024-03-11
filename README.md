@@ -4,7 +4,8 @@ This is a simple quote generator that utilizes the API services from api-ninjas.
 
 # Deployed at 
 
-```https://quote-generator-eight-delta.vercel.app/
+```
+https://quote-generator-eight-delta.vercel.app/
 ```
 
 ## Installation
