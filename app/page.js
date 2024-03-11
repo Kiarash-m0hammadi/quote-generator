@@ -4,6 +4,7 @@ import Quote from "./quote";
 import CategorySelector from "./categorySelector";
 import LoadingMessage, { ErrorMessage } from "./loading";
 import { useQuotes } from "./useQuotes";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function QuoteApp() {
   const { category, setCategory, quotes, isLoading, error, fetchNewQuotes } =
@@ -14,7 +15,7 @@ export default function QuoteApp() {
   };
 
   return (
-    <div className="container mx-auto my-auto justify-center text-left text-center">
+    <div className="container mx-auto my-auto justify-center text-center h-[40rem] w-full rounded-md relative flex flex-col items-center antialiased">
       <h1 className="text-left font-bold my-7 text-3xl">Quote App</h1>
       <CategorySelector
         category={category}
@@ -24,6 +25,9 @@ export default function QuoteApp() {
       {error && <ErrorMessage error={error} />}
       {quotes.length > 0 && <Quote quotes={quotes} />}
       <button onClick={fetchNewQuotes}>More Quotes</button>
+      <div className="svg-container">
+        <BackgroundBeams className="BackgroundBeams" />
+      </div>
     </div>
   );
 }

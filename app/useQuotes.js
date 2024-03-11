@@ -43,5 +43,12 @@ export function useQuotes(initialCategory) {
     }
   };
 
-  return { category, setCategory, quotes, isLoading, error, fetchNewQuotes };
+  return {
+    category,
+    setCategory,
+    quotes,
+    isLoading,
+    error,
+    fetchNewQuotes,
+  };
 }
