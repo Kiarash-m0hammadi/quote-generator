@@ -24,7 +24,7 @@ export default function CategorySelector({ onCategoryChange }) {
             Choose a Category
           </SheetTitle>
         </SheetHeader>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {categories.map((category) => (
             <SheetTrigger key={category} asChild>
               <button
