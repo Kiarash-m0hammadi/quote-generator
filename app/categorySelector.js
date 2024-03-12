@@ -24,16 +24,16 @@ export default function CategorySelector({ onCategoryChange }) {
             Choose a Category
           </SheetTitle>
         </SheetHeader>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {categories.map((category) => (
             <SheetTrigger key={category} asChild>
               <button
                 value={category}
                 onClick={() => onCategoryChange(category)}
-                className="p-[3px] relative"
+                className="p-[3px] relative "
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px] overflow-auto relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[5px]" />
+                <div className=" py-2 text-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                   {category}
                 </div>
               </button>
