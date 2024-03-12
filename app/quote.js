@@ -5,6 +5,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { motion } from "framer-motion";
+import { set } from "lodash";
 
 export default function Quote({ quotes }) {
   const [copiedQuote, setCopiedQuote] = useState("");
@@ -21,6 +22,11 @@ export default function Quote({ quotes }) {
     }, 1000);
   };
 
+  useEffect(() => {
+    setQuoteIndex(0);
+    setTyping(true);
+  }, [quotes]);
+
   function Typewriter({ text }) {
     const [currentText, setCurrentText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,7 +37,7 @@ export default function Quote({ quotes }) {
           setCurrentText((prevText) => prevText + text[currentIndex]);
           setCurrentIndex((prevIndex) => prevIndex + 1);
         } else {
-          setTyping(false); // Stop typing when complete
+          setTyping(false);
         }
       }, 10);
       return () => clearInterval(timer);
