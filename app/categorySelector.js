@@ -18,9 +18,9 @@ export default function CategorySelector({ onCategoryChange }) {
           </span>
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-slate-400" style={{ overflowY: "scroll" }}>
+      <SheetContent className="bg-slate-700" style={{ overflowY: "scroll" }}>
         <SheetHeader>
-          <SheetTitle className="m-4 text-2xl font-bold text-gray-900">
+          <SheetTitle className="m-4 text-2xl font-bold text-neutral-300">
             Choose a Category
           </SheetTitle>
         </SheetHeader>
