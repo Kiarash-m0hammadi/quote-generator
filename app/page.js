@@ -33,7 +33,7 @@ export default function QuoteApp() {
         New Quotes
       </button>
       <div className="svg-container">
-        <BackgroundBeams className="BackgroundBeams bg-gray-600" />
+        <BackgroundBeams className="BackgroundBeams bg-gray-700" />
       </div>
       <a
         href="https://github.com/Kiarash-m0hammadi"

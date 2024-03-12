@@ -53,7 +53,7 @@ export default function Quote({ quotes }) {
           <ul>
             {quotes.map((quote, index) => (
               <motion.li
-                className="text-lg md:text-2xl font-serif my-4 text-slate-900 cursor-pointer transition-colors hover:text-slate-400 active:animate-ping"
+                className="text-lg md:text-2xl font-serif my-4 text-slate-200 cursor-pointer transition-colors hover:text-slate-400 active:animate-ping"
                 key={quote.quote}
                 onClick={() => {
                   copyQuoteToClipboard(quote);
