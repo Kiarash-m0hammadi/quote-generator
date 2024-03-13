@@ -23,7 +23,7 @@ export default function Quote({ quotes }) {
     <Popover>
       <PopoverTrigger asChild>
         <div>
-          <ul ul className="mx-3 text-left">
+          <ul ul className="mx-3 text-left lg:mx-36 md:mx-16">
             {quotes.map((quote, index) => (
               <div
                 key={index}
