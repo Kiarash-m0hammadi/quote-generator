@@ -14,7 +14,6 @@ export async function fetchQuotes(category) {
       mode: "cors",
     }
   );
-  console.log(response);
 
   if (!response.ok) {
     throw new Error(`Error fetching quotes: ${response.statusText}`);

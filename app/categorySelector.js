@@ -18,13 +18,13 @@ export default function CategorySelector({ onCategoryChange }) {
           </span>
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-slate-700" style={{ overflowY: "scroll" }}>
+      <SheetContent className="bg-gradient-to-t from-slate-700 to-slate-950 overflow-y-auto bg-opacity-70">
         <SheetHeader>
-          <SheetTitle className="m-4 text-2xl font-bold text-neutral-300">
+          <SheetTitle className="m-4 mb-9 text-2xl font-bold text-neutral-300">
             Choose a Category
           </SheetTitle>
         </SheetHeader>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {categories.map((category) => (
             <SheetTrigger key={category} asChild>
               <button
